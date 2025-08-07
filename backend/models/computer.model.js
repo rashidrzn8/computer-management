@@ -13,6 +13,7 @@ const computerSchema = new mongoose.Schema(
     status: {
       type: String,
       enum: ["online", "offline"],
+      required: true,
       default: "online",
     },
   },
@@ -21,5 +22,5 @@ const computerSchema = new mongoose.Schema(
   }
 );
 
-const Product = mongoose.model("Computer", computerSchema);
-export default Product;
+const Computer = mongoose.model("Computer", computerSchema);
+export default Computer;
